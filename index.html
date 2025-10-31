@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroméxico - Reservaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Aeroméxico Logo" class="logo">
+            <h1>Aeroméxico Reservaciones</h1>
+        </header>
+
+        <main class="search-section">
+            <div class="search-card">
+                <h2>Buscar tu reservación</h2>
+                <form id="searchForm">
+                    <div class="form-group">
+                        <label for="codigo">Código de Reservación</label>
+                        <input 
+                            type="text" 
+                            id="codigo" 
+                            name="codigo" 
+                            placeholder="Ej: DXGRUW o 1326819"
+                            maxlength="6"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input 
+                            type="text" 
+                            id="apellido" 
+                            name="apellido" 
+                            placeholder="Ej: GOMEZ"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn-primary">Buscar Reservación</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
