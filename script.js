@@ -14,10 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Validar código de reservación (debe ser LOUKCL)
+            // Validar código de reservación
             if (codigo === 'LOUKCL' && apellido === 'AGUILAR') {
                 // Redirigir a la página de detalles de la reservación
                 window.location.href = 'reservacion.html';
+            } else if (codigo === 'ISYCNQ') {
+                // Validar apellido (acepta "GOMEZ ESQUEDA" o solo "GOMEZ")
+                const apellidoNormalizado = apellido.replace(/\s+/g, ' ').trim();
+                if (apellidoNormalizado === 'GOMEZ ESQUEDA' || apellidoNormalizado === 'GOMEZ') {
+                    // Redirigir a la página de detalles de la reservación 2
+                    window.location.href = 'reservacion2.html';
+                } else {
+                    alert('No se encontró ninguna reservación con los datos proporcionados.\n\nPor favor, verifique el código de reservación y el apellido.');
+                }
             } else {
                 alert('No se encontró ninguna reservación con los datos proporcionados.\n\nPor favor, verifique el código de reservación y el apellido.');
             }
@@ -40,4 +49,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
 
